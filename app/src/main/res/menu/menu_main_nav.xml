@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"
+            android:visible="true">
+            <menu>
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Logout"
+                    android:visible="true" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Support">
+        <menu>
+<!--            <item-->
+<!--                android:id="@+id/rate_us"-->
+<!--                android:icon="@drawable/ic_star"-->
+<!--                android:title="Rate us on playstore" />-->
+<!--            <item-->
+<!--                android:id="@+id/share"-->
+<!--                android:icon="@drawable/ic_share"-->
+<!--                android:title="Share this app" />-->
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_feedback"
+                android:title="Feedback" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="Privacy and Information">
+        <menu>
+            <item
+                android:id="@+id/about_us"
+                android:icon="@drawable/ic_about"
+                android:title="About us" />
+            <item
+                android:id="@+id/terms_of_use"
+                android:icon="@drawable/ic_terms_of_use"
+                android:title="Terms of use" />
+            <item
+                android:id="@+id/privacy_policy"
+                android:icon="@drawable/ic_privacy_policy"
+                android:title="Privacy policy" />
+        </menu>
+    </item>
+
+</menu>

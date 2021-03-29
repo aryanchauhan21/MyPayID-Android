@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toolbarLayout"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:fitsSystemWindows="true"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            >
+            <include layout="@layout/app_toolbar" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aclonica"
+        android:text="MyPayID"
+        android:textColor="?attr/colorAccent"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarLayout" />
+
+
+    <TextView
+        android:id="@+id/guide_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Please enter OTP sent to your phone"
+        android:textSize="16sp"
+        android:textColor="@color/primaryText"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginTop="150dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otp_layout"
+        style="@style/Widget.InputLayoutTextBox"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:hint="OTP"
+        app:prefixTextColor="#fffa65"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resend"
+        android:layout_width="64dp"
+        android:layout_height="34dp"
+        android:paddingRight="0dp"
+        android:paddingLeft="0dp"
+        android:gravity="center"
+        android:text="Resend"
+        android:textSize="10sp"
+        android:textColor="@color/primaryText"
+        style="@style/Widget.Button.Resend"
+        app:rippleColor="@color/ripple_secondary"
+        app:layout_constraintStart_toStartOf="@id/otp_layout"
+        app:layout_constraintEnd_toEndOf="@id/otp_layout"
+        app:layout_constraintTop_toBottomOf="@+id/otp_layout"
+        android:layout_marginTop="1dp"
+        />
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/resend"
+        app:layout_constraintEnd_toEndOf="@id/resend"
+        app:layout_constraintTop_toBottomOf="@id/resend"
+        android:layout_marginTop="1dp"
+        android:textSize="10sp"
+        android:textColor="@color/primaryText"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:textSize="15sp"
+        android:textColor="@color/primaryText"
+        style="@style/Widget.Button.Primary"
+        app:rippleColor="#fed330"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_text"
+        android:text="Wrong OTP, please enter the correct one."
+        android:textColor="@color/red"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/verify"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

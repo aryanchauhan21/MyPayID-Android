@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MyPayID</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="email_invalid_error">Email address invalid</string>
+    <string name="password_invalid_error">Password length cannot be less than 8 characters</string>
+    <string name="name_invalid_error">Name field cannot be blank</string>
+    <string name="about_app"><b>MyPayID</b> is created as an attempt to bring the details of various digital payment IDs of users spread across different platforms at one place.
+        \n\nUsers can complete their payment profiles and add all the payment methods they use in one place, furthermore users can also search for all payment methods of
+        other users by their Names, Phone number and Email ID.
+    </string>
+
+    <string name="about_developer">
+        <big><b>Developer details : \n\n</b></big>
+        Aryan Chauhan
+        Email : sansarya2121@gmail.com
+    </string>
+    <string name="developer_contact">Aryan Chauhan\nSansarya2121@gmail.com</string>
+    <string name="feedback_helptext">Please share your valuable feedback!</string>
+    <string name="verification_instruction">Please check you mail and click verification link to verify your account. After verifying, come back to app and click refresh to continue.</string>
+</resources>

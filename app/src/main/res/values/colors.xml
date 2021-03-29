@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2f3640</color>
+    <color name="colorPrimaryDark">#2f3640</color>
+    <color name="colorAccent">#fff200</color>
+    <color name="hintColor">#8395a7</color>
+    <color name="colorSecondary">#ffa801</color>
+    <color name="primaryText">#FFFFFF</color>
+    <color name="ripple_secondary">#fa8231</color>
+    <color name="ripple_primary">#fed330</color>
+    <color name="disabled_btn_bg">#576574</color>
+    <color name="red">#ff3838</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#27ae60</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grey">#596275</color>
+    <color name="black">#000000</color>
+    <color name="light_yello">#fffa65</color>
+    <color name="light_greenish_blue">#55efc4</color>
+    <color name="light_blue">#81ecec</color>
+    <color name="dark_yello">#f9ca24</color>
+</resources>

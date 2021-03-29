@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="15dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingEnd="15dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:outlineSpotShadowColor="@color/white"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_back"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_1"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/icon_back"
+                android:scaleType="fitXY"
+                android:src="@drawable/phonepe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="@id/icon">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/actor"
+                    android:gravity="end"
+                    android:text="Username"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="+91XXXXXXXXXX"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

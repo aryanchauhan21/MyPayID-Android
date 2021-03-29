@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fitsSystemWindows="true"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            >
+            <include layout="@layout/app_toolbar" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Verify your Email address"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/send_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Email"
+            android:textSize="15sp"
+            android:textColor="@color/primaryText"
+            style="@style/Widget.Button.Primary"
+            app:rippleColor="@color/ripple_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            android:layout_marginTop="40dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="15sp"
+            android:textColor="@color/primaryText"
+            style="@style/Widget.Button.Primary"
+            app:rippleColor="@color/ripple_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/send_email"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/waiting_text"
+            android:layout_width="300dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textStart"
+            android:text = "@string/verification_instruction"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waiting_text"
+            app:lottie_rawRes="@raw/plane"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:textSize="15sp"
+            android:textColor="@color/primaryText"
+            style="@style/Widget.Button.Secondary"
+            app:rippleColor="@color/colorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lottie_anim"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
